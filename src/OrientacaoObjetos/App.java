@@ -17,20 +17,17 @@ public class App {
 
         pc.fabricante = dell;
 
+        double valorComDesconto = pc.calcularDesconto(0.1);
+        System.out.println("Valor com desconto: " + valorComDesconto);
 
-        Computador note = new Computador();
+        boolean sucesso = pc.adicionarMemoriaRam(8);
 
-        note.modelo = "Macbook Pro";
-        note.marca = "Apple";
-        note.preco = 15999.99;
-        note.memoriaRam = 16;
-        note.espacoHD = 512;
-        note.placaDeVideoDedicada = false;
-
-        Fabricante apple = new Fabricante();
-        apple.nome = "Apple";
-        apple.endereco = "Av. Estados, 308";
-
-        note.fabricante = apple;
+        if (sucesso) {
+            System.out.println("Memoria Ram adicionada!");
+            System.out.println("Nova quantidade: " + pc.memoriaRam);
+            System.out.println("Novo valor do computador: " + pc.preco);
+        } else {
+            System.out.println("Não foi possível adicionar memória");
+        }
     }
 }
