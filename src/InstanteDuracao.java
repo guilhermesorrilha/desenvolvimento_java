@@ -6,6 +6,7 @@ import java.time.LocalTime;
 
 public class InstanteDuracao {
     static void main(String[] args) throws InterruptedException {
+
         /*Instant inicio = Instant.now();
         Thread.sleep(6000);
         Instant fim = Instant.now();

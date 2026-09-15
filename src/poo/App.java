@@ -1,21 +1,15 @@
-package OrientacaoObjetos;
+package poo;
 
 public class App {
     static void main(String[] args) {
-        Computador pc = new Computador();
-
-        pc.modelo = "G5";
-        pc.marca = "Dell";
-        pc.preco = 5200.50;
-        pc.memoriaRam = 8;
-        pc.espacoHD = 256;
-        pc.placaDeVideoDedicada = true;
 
         Fabricante dell = new Fabricante();
         dell.nome = "Dell Computadores";
         dell.endereco = "Av. Paulista, 1000";
 
-        pc.fabricante = dell;
+        Computador pc = new Computador("G5", "Dell", 5200.50, 8, 256, true, dell);
+
+        System.out.println(pc);
 
         double valorComDesconto = pc.calcularDesconto(0.1);
         System.out.println("Valor com desconto: " + valorComDesconto);

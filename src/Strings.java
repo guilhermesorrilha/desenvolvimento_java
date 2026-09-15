@@ -1,5 +1,6 @@
 public class Strings {
     static void main(String[] args) {
+
         String escola1 = "Fiap";
 
         String escola2 = new String("Fiap");

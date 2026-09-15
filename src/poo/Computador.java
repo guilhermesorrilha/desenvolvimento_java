@@ -1,4 +1,4 @@
-package OrientacaoObjetos;
+package poo;
 
 public class Computador {
 
@@ -10,6 +10,19 @@ public class Computador {
     boolean placaDeVideoDedicada;
 
     Fabricante fabricante;
+
+    public Computador() {
+    }
+
+    public Computador(String modelo, String marca, double preco, int memoriaRam, int espacoHD, boolean placaDeVideoDedicada, Fabricante fabricante) {
+        this.modelo = modelo;
+        this.marca = marca;
+        this.preco = preco;
+        this.memoriaRam = memoriaRam;
+        this.espacoHD = espacoHD;
+        this.placaDeVideoDedicada = placaDeVideoDedicada;
+        this.fabricante = fabricante;
+    }
 
     // Atributo estático e final - constante compartilhada por todas as instâncias:
     // existe uma única cópia na classe e não pode ser reatribuída
@@ -31,5 +44,18 @@ public class Computador {
     // por isso é chamado pelo nome da classe: Computador.quantidadeRamValida(8)
     static boolean quantidadeRamValida(int quantidade) {
         return quantidade % 2 == 0;
+    }
+
+    @Override
+    public String toString() {
+        return "Computador{" +
+                "modelo='" + modelo + '\'' +
+                ", marca='" + marca + '\'' +
+                ", preco=" + preco +
+                ", memoriaRam=" + memoriaRam +
+                ", espacoHD=" + espacoHD +
+                ", placaDeVideoDedicada=" + placaDeVideoDedicada +
+                ", fabricante=" + fabricante +
+                '}';
     }
 }
